@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calc';
+
+  private result: string = "";
+  name(value: string) {
+    if (value == "=") {
+      this.result = eval(this.result);
+    } else {
+      this.result += value;
+    }
+  }
 }
